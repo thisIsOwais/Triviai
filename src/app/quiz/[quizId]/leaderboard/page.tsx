@@ -193,7 +193,7 @@ export default function QuizLeaderboardPage() {
                 <div className="h-8 w-8 rounded-lg gradient-violet flex items-center justify-center">
                   <Brain className="h-5 w-5 text-white" />
                 </div>
-                <span className="text-xl font-bold gradient-text">QuizMaster</span>
+                <span className="text-xl font-bold gradient-text">Triviai</span>
               </Link>
               <ThemeToggle />
             </div>
@@ -233,7 +233,7 @@ export default function QuizLeaderboardPage() {
               <div className="h-8 w-8 rounded-lg gradient-violet flex items-center justify-center">
                 <Brain className="h-5 w-5 text-white" />
               </div>
-              <span className="text-xl font-bold gradient-text">QuizMaster</span>
+              <span className="text-xl font-bold gradient-text">Triviai</span>
             </Link>
 
             <div className="hidden md:flex items-center space-x-8">

@@ -142,7 +142,7 @@ const handleSignUp = async (e: React.FormEvent) => {
                 <div className="h-8 w-8 rounded-lg gradient-violet flex items-center justify-center">
                   <Brain className="h-5 w-5 text-white" />
                 </div>
-                <span className="text-xl font-bold gradient-text">QuizMaster</span>
+                <span className="text-xl font-bold gradient-text">Triviai</span>
               </Link>
             </div>
           </div>
@@ -196,7 +196,7 @@ return (
               <div className="h-8 w-8 rounded-lg gradient-violet flex items-center justify-center">
                 <Brain className="h-5 w-5 text-white" />
               </div>
-              <span className="text-xl font-bold gradient-text">QuizMaster</span>
+              <span className="text-xl font-bold gradient-text">Triviai</span>
             </Link>
 
             <div className="flex items-center space-x-4">
@@ -217,7 +217,7 @@ return (
             <div className="h-16 w-16 rounded-full gradient-violet flex items-center justify-center mx-auto mb-4">
               <Brain className="h-8 w-8 text-white" />
             </div>
-            <h1 className="text-3xl font-bold mb-2 text-gray-900 dark:text-white">Join QuizMaster</h1>
+            <h1 className="text-3xl font-bold mb-2 text-gray-900 dark:text-white">Join Triviai</h1>
             <p className="text-gray-600 dark:text-gray-300">Create your account and start your learning journey</p>
           </div>
 

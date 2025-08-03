@@ -85,7 +85,7 @@ export default  function LandingPage() {
               <div className="h-8 w-8 rounded-lg gradient-violet flex items-center justify-center">
                 <Brain className="h-5 w-5 text-white" />
               </div>
-              <span className="text-xl font-bold gradient-text">QuizMaster</span>
+              <span className="text-xl font-bold gradient-text">Triviai</span>
             </div>
 
             <div className="hidden md:flex items-center space-x-8">
@@ -151,7 +151,7 @@ export default  function LandingPage() {
                 onClick={() => handleAuthAction("Start playing")}
               >
                 <Play className="h-5 w-5 mr-2" />
-                Start Playing Now
+                Start Now
               </Button>
               <Button
                 variant="outline"
@@ -339,7 +339,7 @@ export default  function LandingPage() {
               Loved by <span className="gradient-text">Quiz Enthusiasts</span>
             </h2>
             <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-              See what our community has to say about their QuizMaster experience.
+              See what our community has to say about their Triviai experience.
             </p>
           </div>
 
@@ -352,7 +352,7 @@ export default  function LandingPage() {
                   ))}
                 </div>
                 <p className="text-gray-600 dark:text-gray-300 mb-4">
-                  "QuizMaster has completely transformed how I study. The adaptive difficulty keeps me challenged, and
+                  "Triviai has completely transformed how I study. The adaptive difficulty keeps me challenged, and
                   the multiplayer battles make learning so much fun!"
                 </p>
                 <div className="flex items-center">
@@ -425,7 +425,7 @@ export default  function LandingPage() {
               Ready to <span className="gradient-text">Master Every Quiz?</span>
             </h2>
             <p className="text-lg md:text-xl text-muted-foreground mb-8">
-              Join over 50,000 learners who are already improving their knowledge and having fun with QuizMaster.
+              Join over 50,000 learners who are already improving their knowledge and having fun with Triviai.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
@@ -475,7 +475,7 @@ export default  function LandingPage() {
                 <div className="h-8 w-8 rounded-lg gradient-violet flex items-center justify-center">
                   <Brain className="h-5 w-5 text-white" />
                 </div>
-                <span className="text-xl font-bold gradient-text">QuizMaster</span>
+                <span className="text-xl font-bold gradient-text">Triviai</span>
               </div>
               <p className="text-muted-foreground text-sm">
                 The ultimate quiz platform for learners, educators, and knowledge enthusiasts worldwide.
@@ -574,7 +574,7 @@ export default  function LandingPage() {
           </div>
 
           <div className="border-t mt-8 pt-8 text-center text-sm text-muted-foreground">
-            <p>&copy; {new Date().getFullYear()} QuizMaster. All rights reserved.</p>
+            <p>&copy; {new Date().getFullYear()} Triviai. All rights reserved.</p>
           </div>
         </div>
       </footer>
