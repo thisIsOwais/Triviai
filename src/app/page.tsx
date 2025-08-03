@@ -69,7 +69,7 @@ export default  function LandingPage() {
       console.log("Sign in clicked")
       console.log(isSignedIn)
       router.push('/dashboard')
-      return
+      return;
     }
       router.push('/sign-in');
     

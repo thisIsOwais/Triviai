@@ -84,7 +84,176 @@ const sampleQuestions: QuestionData[] = [
     category: "Biology",
     difficulty: "easy",
   },
+  {
+    id: 4,
+    question: "Who wrote the play 'Romeo and Juliet'?",
+    options: [
+      { id: "a", text: "William Wordsworth" },
+      { id: "b", text: "Jane Austen" },
+      { id: "c", text: "William Shakespeare" },
+      { id: "d", text: "Leo Tolstoy" },
+    ],
+    correctAnswer: "c",
+    explanation: "William Shakespeare is the author of the famous tragedy 'Romeo and Juliet'.",
+    category: "Literature",
+    difficulty: "medium",
+  },
+  {
+    id: 5,
+    question: "What is the chemical symbol for Gold?",
+    options: [
+      { id: "a", text: "Go" },
+      { id: "b", text: "Au" },
+      { id: "c", text: "Ag" },
+      { id: "d", text: "Gd" },
+    ],
+    correctAnswer: "b",
+    explanation: "Gold has the chemical symbol 'Au' from its Latin name 'Aurum'.",
+    category: "Chemistry",
+    difficulty: "easy",
+  },
+  {
+    id: 6,
+    question: "Which country hosted the 2016 Summer Olympics?",
+    options: [
+      { id: "a", text: "China" },
+      { id: "b", text: "Brazil" },
+      { id: "c", text: "UK" },
+      { id: "d", text: "Russia" },
+    ],
+    correctAnswer: "b",
+    explanation: "The 2016 Summer Olympics were held in Rio de Janeiro, Brazil.",
+    category: "Sports",
+    difficulty: "easy",
+  },
+  {
+    id: 7,
+    question: "What is H2O commonly known as?",
+    options: [
+      { id: "a", text: "Oxygen" },
+      { id: "b", text: "Salt" },
+      { id: "c", text: "Water" },
+      { id: "d", text: "Hydrogen" },
+    ],
+    correctAnswer: "c",
+    explanation: "H2O is the chemical formula for water.",
+    category: "Chemistry",
+    difficulty: "easy",
+  },
+  {
+    id: 8,
+    question: "Who painted the Mona Lisa?",
+    options: [
+      { id: "a", text: "Pablo Picasso" },
+      { id: "b", text: "Vincent Van Gogh" },
+      { id: "c", text: "Leonardo da Vinci" },
+      { id: "d", text: "Michelangelo" },
+    ],
+    correctAnswer: "c",
+    explanation: "Leonardo da Vinci painted the Mona Lisa during the Renaissance.",
+    category: "Art",
+    difficulty: "medium",
+  },
+  {
+    id: 9,
+    question: "Which is the smallest prime number?",
+    options: [
+      { id: "a", text: "0" },
+      { id: "b", text: "1" },
+      { id: "c", text: "2" },
+      { id: "d", text: "3" },
+    ],
+    correctAnswer: "c",
+    explanation: "2 is the smallest and the only even prime number.",
+    category: "Mathematics",
+    difficulty: "easy",
+  },
+  {
+    id: 10,
+    question: "Who was the first man to step on the moon?",
+    options: [
+      { id: "a", text: "Buzz Aldrin" },
+      { id: "b", text: "Yuri Gagarin" },
+      { id: "c", text: "Neil Armstrong" },
+      { id: "d", text: "Michael Collins" },
+    ],
+    correctAnswer: "c",
+    explanation: "Neil Armstrong stepped on the moon on July 20, 1969.",
+    category: "History",
+    difficulty: "medium",
+  },
+  {
+    id: 11,
+    question: "Which organ is responsible for pumping blood in the human body?",
+    options: [
+      { id: "a", text: "Brain" },
+      { id: "b", text: "Lungs" },
+      { id: "c", text: "Heart" },
+      { id: "d", text: "Liver" },
+    ],
+    correctAnswer: "c",
+    explanation: "The heart pumps blood throughout the body.",
+    category: "Biology",
+    difficulty: "easy",
+  },
+  {
+    id: 12,
+    question: "What is the square root of 64?",
+    options: [
+      { id: "a", text: "6" },
+      { id: "b", text: "7" },
+      { id: "c", text: "8" },
+      { id: "d", text: "9" },
+    ],
+    correctAnswer: "c",
+    explanation: "The square root of 64 is 8.",
+    category: "Mathematics",
+    difficulty: "easy",
+  },
+  {
+    id: 13,
+    question: "Which language is primarily spoken in Brazil?",
+    options: [
+      { id: "a", text: "Spanish" },
+      { id: "b", text: "Portuguese" },
+      { id: "c", text: "English" },
+      { id: "d", text: "French" },
+    ],
+    correctAnswer: "b",
+    explanation: "Portuguese is the official language of Brazil.",
+    category: "Geography",
+    difficulty: "medium",
+  },
+  {
+    id: 14,
+    question: "What does CPU stand for?",
+    options: [
+      { id: "a", text: "Central Processing Unit" },
+      { id: "b", text: "Computer Processing Unit" },
+      { id: "c", text: "Control Panel Unit" },
+      { id: "d", text: "Central Power Unit" },
+    ],
+    correctAnswer: "a",
+    explanation: "CPU stands for Central Processing Unit — the brain of the computer.",
+    category: "Technology",
+    difficulty: "easy",
+  },
+  {
+    id: 15,
+    question: "Who is the author of 'Harry Potter'?",
+    options: [
+      { id: "a", text: "J.K. Rowling" },
+      { id: "b", text: "Stephen King" },
+      { id: "c", text: "George R.R. Martin" },
+      { id: "d", text: "J.R.R. Tolkien" },
+    ],
+    correctAnswer: "a",
+    explanation: "J.K. Rowling is the British author of the Harry Potter series.",
+    category: "Literature",
+    difficulty: "easy",
+  },
 ]
+
 
 export default function QuizPage() {
   const params = useParams()
@@ -97,7 +266,7 @@ export default function QuizPage() {
     })),
   )
   const [answers, setAnswers] = useState<Record<number, string>>({})
-  const [timeLeft, setTimeLeft] = useState(300) // 5 minutes
+  const [timeLeft, setTimeLeft] = useState(900) // 15 minutes
   const [showResult, setShowResult] = useState(false)
 
   // Update question status when navigating
@@ -233,7 +402,7 @@ export default function QuizPage() {
 
             <div className="flex items-center space-x-4">
               <Timer
-                initialTime={300}
+                initialTime={900}
                 onTimeUp={handleTimeUp}
                 onTimeUpdate={setTimeLeft}
                 warningThreshold={60}
@@ -253,7 +422,7 @@ export default function QuizPage() {
             <div className="lg:col-span-3 space-y-6">
               {/* Mobile Timer */}
               <Timer
-                initialTime={300}
+                initialTime={900}
                 onTimeUp={handleTimeUp}
                 onTimeUpdate={setTimeLeft}
                 warningThreshold={60}

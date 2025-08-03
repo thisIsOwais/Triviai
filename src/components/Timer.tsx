@@ -129,12 +129,13 @@ export function Timer({
             {!display.isExpired && (
               <>
                 {isRunning ? (
-                  <button
-                    onClick={pauseTimer}
-                    className="text-xs text-gray-500 hover:text-gray-700 dark:hover:text-gray-300"
-                  >
-                    Pause
-                  </button>
+                  // <button
+                  //   onClick={pauseTimer}
+                  //   className="text-xs text-gray-500 hover:text-gray-700 dark:hover:text-gray-300"
+                  // >
+                  //   Pause
+                  // </button>
+                  <></>
                 ) : (
                   <button
                     onClick={resumeTimer}

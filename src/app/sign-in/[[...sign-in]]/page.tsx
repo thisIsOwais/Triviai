@@ -51,10 +51,6 @@ export default function SignInPage() {
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
   const router=useRouter();
-  // const handleSignIn = (e: React.FormEvent) => {
-  //   e.preventDefault()
-  //   alert("Demo: Sign in functionality - Add Clerk configuration to enable authentication")
-  // }
 
   const handleSignIn = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -81,22 +77,6 @@ export default function SignInPage() {
     }
   }
   
-
-  // const handleSocialSignIn = async (provider: "oauth_google" | "oauth_github") => {
-  //   try {
-  //     console.log(`Signing in with ${provider}...`)
-  //     return signIn.authenticateWithRedirect({
-  //       strategy: provider,
-  //       redirectUrl: "/sso-callback",         // optional: where user goes first
-  //       redirectUrlComplete: "/dashboard",   // required: where user ends up post-login
-  //     })
-  //     console.log("Social sign-in result:", result)
-  //   } catch (error: any) {
-  //     console.error("Social sign-in error:", error)
-  //     alert(error?.errors?.[0]?.message || "Social sign-in failed")
-  //   }
-  // }
-
   
   const signInWith = (strategy: OAuthStrategy) => {
     return signIn?.authenticateWithRedirect({
@@ -108,8 +88,6 @@ export default function SignInPage() {
         console.log(res)
       })
       .catch((err: any) => {
-        // See https://clerk.com/docs/custom-flows/error-handling
-        // for more info on error handling
         console.log(err.errors)
         console.error(err, null, 2)
       })
