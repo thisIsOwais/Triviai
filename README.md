@@ -1,36 +1,100 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Triviai - Interactive Quiz Platform
 
-## Getting Started
+<div align="center">
 
-First, run the development server:
+![Triviai Logo](public/triviai-logo.svg)
 
+A modern, engaging quiz platform built with Next.js and TypeScript
+
+</div>
+
+## 🌟 Features
+
+- **Interactive Quizzes**: Engage with various quiz categories including Science, History, Geography, and more
+- **Real-time Leaderboard**: Compete globally and track your ranking
+- **Progress Tracking**: Monitor your learning journey with detailed statistics
+- **Dark Mode Support**: Comfortable quiz-taking experience in any lighting condition
+- **Responsive Design**: Seamless experience across all devices
+- **Performance Analytics**: Track your accuracy, time spent, and improvement over time
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js 18.x or later
+- npm or yarn package manager
+
+### Installation
+
+1. Clone the repository
+```bash
+git clone <your-repo-url>
+cd my-app
+```
+
+2. Install dependencies
+```bash
+npm install
+# or
+yarn install
+```
+
+3. Start the development server
 ```bash
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. Open [http://localhost:3000](http://localhost:3000) with your browser to see the application
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🛠 Tech Stack
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- [Next.js](https://nextjs.org/) - React framework for production
+- [TypeScript](https://www.typescriptlang.org/) - Static type checking
+- [Tailwind CSS](https://tailwindcss.com/) - Utility-first CSS framework
+- [Shadcn/ui](https://ui.shadcn.com/) - UI component library
+- [Lucide Icons](https://lucide.dev/) - Beautiful icons
 
-## Learn More
+## 📱 Application Structure
 
-To learn more about Next.js, take a look at the following resources:
+```
+src/
+├── app/                 # Next.js app directory
+├── components/          # Reusable UI components
+├── lib/                 # Utility functions and configurations
+└── middleware.ts       # Next.js middleware
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🎯 Core Features
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Quiz System
+- Multiple quiz categories
+- Difficulty levels (Easy, Medium, Hard)
+- Real-time scoring
+- Detailed explanations for answers
 
-## Deploy on Vercel
+### Leaderboard
+- Global rankings
+- Weekly challenges
+- Category-specific leaderboards
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### User Dashboard
+- Performance statistics
+- Quiz history
+- Achievement tracking
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🙏 Acknowledgments
+
+- [Next.js Documentation](https://nextjs.org/docs)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Shadcn/ui Components](https://ui.shadcn.com/)
+- [Clerk(Auth)](https://clerk.com/)
