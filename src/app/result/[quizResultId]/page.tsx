@@ -298,10 +298,13 @@ export default function ResultPage() {
               </Link>
             </Button>
             <Button variant="outline" asChild>
-              <Link href="/leaderboard">
+              <Link href={`/quiz/${params.quizResultId}/leaderboard`}>
                 <TrendingUp className="h-4 w-4 mr-2" />
-                View Leaderboard
+                Quiz Leaderboard
               </Link>
+            </Button>
+            <Button variant="outline" asChild>
+              <Link href="/leaderboard">Global Leaderboard</Link>
             </Button>
             <Button variant="outline">
               <Share2 className="h-4 w-4 mr-2" />

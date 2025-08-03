@@ -12,7 +12,6 @@ import { Brain, Mail, Lock, Eye, EyeOff, User, Moon, Sun } from "lucide-react"
 import Link from "next/link"
 import { useTheme } from "next-themes"
 import { useEffect, useState } from "react"
-import { useSignIn } from "@clerk/nextjs"
 
 function ThemeToggle() {
   const { theme, setTheme } = useTheme()
@@ -45,7 +44,6 @@ function ThemeToggle() {
 }
 
 export default function SignUpPage() {
-  const { signIn, isLoaded, setActive } = useSignIn()
   const [showPassword, setShowPassword] = useState(false)
   const [showConfirmPassword, setShowConfirmPassword] = useState(false)
   const [formData, setFormData] = useState({
@@ -61,27 +59,17 @@ export default function SignUpPage() {
     setFormData((prev) => ({ ...prev, [field]: value }))
   }
 
-
-  const handleSignUp = async (e: React.FormEvent) => {
+  const handleSignUp = (e: React.FormEvent) => {
     e.preventDefault()
-    if (!isLoaded) return
-  
-    try {
-      const result = await signIn.create({
-        identifier: email,
-        password,
-      })
-  
-      if (result.status === "complete") {
-        await setActive({ session: result.createdSessionId })
-        window.location.href = "/dashboard" // or your home page
-      } else {
-        console.log("Additional steps required")
-      }
-    } catch (err: any) {
-      console.error("Sign in failed:", err.errors[0]?.message)
-      alert(err.errors[0]?.message)
+    if (formData.password !== formData.confirmPassword) {
+      alert("Passwords don't match!")
+      return
     }
+    if (!formData.agreeToTerms) {
+      alert("Please agree to the terms and conditions")
+      return
+    }
+    alert("Demo: Sign up functionality - Add Clerk configuration to enable authentication")
   }
 
   const handleSocialSignUp = (provider: string) => {

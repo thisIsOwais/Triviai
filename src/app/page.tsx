@@ -23,6 +23,7 @@ import Link from "next/link"
 import { useTheme } from "next-themes"
 import { useEffect, useState } from "react"
 import { useAuth } from "@clerk/nextjs"
+import { useRouter } from "next/navigation"
 
 function ThemeToggle() {
   const { theme, setTheme } = useTheme()
@@ -54,20 +55,23 @@ function ThemeToggle() {
   )
 }
 
-export default function LandingPage() {
+export default  function LandingPage() {
   // const { signIn, isLoaded, setActive } = useSignIn()
+  const router= useRouter();
   const { isSignedIn, userId } = useAuth()
   const handleAuthAction = (action: string) => {
     // e.preventDefault()
+
     // if (!isLoaded) return
     console.log(isSignedIn)
     if(isSignedIn)
     {
       console.log("Sign in clicked")
       console.log(isSignedIn)
-      window.location.href = '/dashboard'
+      router.push('/dashboard')
+      return
     }
-      window.location.href = '/sign-in'
+      router.push('/sign-in');
     
   }
 

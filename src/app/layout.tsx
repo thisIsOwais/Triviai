@@ -20,10 +20,16 @@ export default function RootLayout({
 }) {
   // Check if Clerk is properly configured
   const clerkPublishableKey = process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY
-
+  // console.log("Clerk Publishable Key:", clerkPublishableKey)
   if (clerkPublishableKey) {
+    console.log("Clerk is properly configured.")
     return (
-      <ClerkProvider publishableKey={clerkPublishableKey}>
+      <ClerkProvider publishableKey={clerkPublishableKey}
+      signInUrl="/sign-in"
+      signUpUrl="/sign-up"
+      afterSignInUrl="/dashboard"
+      afterSignUpUrl="/dashboard"
+      >
         <html lang="en" suppressHydrationWarning>
           <body className={inter.className}>
             <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>

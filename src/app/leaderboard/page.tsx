@@ -157,7 +157,7 @@ function LeaderboardCard({ players, showStreak = false }: { players: any[]; show
     <div className="space-y-3">
       {players.map((player, index) => {
         const isTopThree = player.rank <= 3
-        const rankIcon = player.rank === 1 ? Crown : player.rank === 2 ? Trophy : player.rank === 3 ? Medal : null
+        const RankIcon = player.rank === 1 ? Crown : player.rank === 2 ? Trophy : player.rank === 3 ? Medal : null
 
         return (
           <Card
@@ -178,7 +178,7 @@ function LeaderboardCard({ players, showStreak = false }: { players: any[]; show
                             : "bg-gradient-to-r from-violet-400 to-purple-400"
                     } text-white font-bold text-sm`}
                   >
-                    {rankIcon ? <rankIcon className="h-4 w-4" /> : player.rank}
+                    {RankIcon ? <RankIcon className="h-4 w-4" /> : player.rank}
                   </div>
                   <div className="h-10 w-10 rounded-full bg-gradient-to-r from-violet-400 to-purple-400 flex items-center justify-center text-white font-semibold">
                     {player.avatar}
