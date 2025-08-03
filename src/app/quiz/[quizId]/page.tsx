@@ -266,7 +266,7 @@ export default function QuizPage() {
     })),
   )
   const [answers, setAnswers] = useState<Record<number, string>>({})
-  const [timeLeft, setTimeLeft] = useState(900) // 15 minutes
+  const [timeLeft, setTimeLeft] = useState(1800) // 15 minutes
   const [showResult, setShowResult] = useState(false)
 
   // Update question status when navigating
@@ -402,7 +402,7 @@ export default function QuizPage() {
 
             <div className="flex items-center space-x-4">
               <Timer
-                initialTime={900}
+                initialTime={1800}
                 onTimeUp={handleTimeUp}
                 onTimeUpdate={setTimeLeft}
                 warningThreshold={60}
@@ -422,7 +422,7 @@ export default function QuizPage() {
             <div className="lg:col-span-3 space-y-6">
               {/* Mobile Timer */}
               <Timer
-                initialTime={900}
+                initialTime={1800}
                 onTimeUp={handleTimeUp}
                 onTimeUpdate={setTimeLeft}
                 warningThreshold={60}
